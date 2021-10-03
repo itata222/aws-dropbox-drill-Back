@@ -2,14 +2,21 @@ const mongoose = require("mongoose");
 
 const imageSchema = new mongoose.Schema(
     {
-        name: {
-            type: String,
-            trim: true,
+        originalName: {
+            type: String
         },
-        src: {
-            type: String,
-            required: [true, "Image source is required"],
+        storageName: {
+            type: String
         },
+        bucket: {
+            type: String
+        },
+        region: {
+            type: String
+        },
+        key: {
+            type: String
+        }
     },
     {
         timestamps: true,
