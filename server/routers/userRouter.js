@@ -17,7 +17,7 @@ router.post('/upload-image',auth, uploadImageToS3, async (req, res) => {
     if (!req.file) {
         res.status(422).send({
             code: 422,
-            message: "File not uplpaded"
+            message: "File not uploaded"
         });
     }
 
